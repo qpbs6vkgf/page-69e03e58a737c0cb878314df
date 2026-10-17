@@ -1,0 +1,401 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>飞鸟 FlyingBird · 使用说明与订阅方案</title><meta name="description" content="飞鸟 FlyingBird 以说明书的方式说明自身：订阅方案逐条列出，客户端获取与配置步骤按顺序写清，常见问题编号作答。本文不承诺任何未确认的性能数据。"><meta name="keywords" content="飞鸟,FlyingBird,订阅方案,客户端配置,网络工具说明,常见问题"><meta name="robots" content="index,follow"><link rel="canonical" href="https://p-8d6ecaf3ea.zkfrd.cn/"><meta property="og:type" content="website"><meta property="og:title" content="飞鸟 FlyingBird · 使用说明与订阅方案"><meta property="og:description" content="飞鸟 FlyingBird 以说明书的方式说明自身：订阅方案逐条列出，客户端获取与配置步骤按顺序写清，常见问题编号作答。本文不承诺任何未确认的性能数据。"><meta property="og:url" content="https://p-8d6ecaf3ea.zkfrd.cn/"><meta property="og:site_name" content="飞鸟(FlyingBird)"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "url": "https://p-8d6ecaf3ea.zkfrd.cn/", "name": "飞鸟 FlyingBird · 使用说明与订阅方案", "description": "飞鸟 FlyingBird 以说明书的方式说明自身：订阅方案逐条列出，客户端获取与配置步骤按顺序写清，常见问题编号作答。本文不承诺任何未确认的性能数据。", "inLanguage": "zh-CN"}</script><meta name="publisher-task" content="69e03e58a737c0cb878314df:69540f4704df6be9d70665c617aa4b9c6cb17281d723598f004ec43b80329481:d50ad0cb9d689fb5bab6"></head><body id="top"><style>
+  :root{--slate-900:#171d21;--slate-800:#222a2f;--slate-700:#39444b;--slate-500:#69767e;--slate-300:#b9c2c7;--slate-150:#e3e8ea;--slate-100:#eef1f2;--paper:#f6f8f8;--cyan:#0e8f9c;--cyan-deep:#0a6e79;--cyan-wash:#e2f2f3;--rule:#d3dadc;--measure:72ch}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;background:var(--paper);color:var(--slate-800);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;font-size:16px;line-height:1.75;letter-spacing:.01em}
+  a{color:var(--cyan-deep);text-decoration:none;border-bottom:1px solid rgba(10,110,121,.32)}
+  a:hover{color:var(--slate-900);border-bottom-color:var(--slate-900)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* 顶部细横条导航 */
+  .topbar{position:sticky;top:0;z-index:20;background:rgba(246,248,248,.94);border-bottom:1px solid var(--rule);backdrop-filter:blur(6px)}
+  .topbar-inner{max-width:1120px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:28px;min-height:52px}
+  .mark{font-weight:700;font-size:15px;letter-spacing:.14em;color:var(--slate-900);border:0;white-space:nowrap}
+  .mark em{font-style:normal;color:var(--cyan);font-weight:600;letter-spacing:.02em}
+  .topnav{display:flex;gap:22px;flex-wrap:wrap;font-size:13.5px}
+  .topnav a{border:0;color:var(--slate-700);padding:2px 0;border-bottom:1px solid transparent}
+  .topnav a:hover{border-bottom-color:var(--cyan);color:var(--slate-900)}
+  .topbar-note{margin-left:auto;font-size:12.5px;color:var(--slate-500);letter-spacing:.06em;white-space:nowrap}
+
+  /* 首屏：长文叙事开篇 */
+  .hero{padding:72px 0 24px;border-bottom:1px solid var(--rule)}
+  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:56px;align-items:start}
+  .kicker{font-size:12.5px;letter-spacing:.2em;color:var(--cyan-deep);text-transform:uppercase;margin:0 0 18px}
+  h1{font-size:clamp(30px,4.4vw,50px);line-height:1.22;letter-spacing:-.01em;margin:0 0 26px;color:var(--slate-900);font-weight:700}
+  h1 span{display:block;font-size:.44em;font-weight:400;letter-spacing:.14em;color:var(--slate-500);margin-top:14px}
+  .hero-body p{max-width:var(--measure);margin:0 0 18px;color:var(--slate-700)}
+  .hero-body p:last-child{margin-bottom:0}
+  .drop::first-letter{float:left;font-size:3.1em;line-height:.88;padding:6px 10px 0 0;color:var(--cyan-deep);font-weight:700}
+  .hero-aside{border-top:2px solid var(--slate-900);padding-top:16px;font-size:13.5px;color:var(--slate-700)}
+  .hero-aside h2{font-size:13px;letter-spacing:.14em;margin:0 0 12px;color:var(--slate-900)}
+  .hero-aside dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 14px}
+  .hero-aside dt{color:var(--slate-500);font-size:12.5px;white-space:nowrap}
+  .hero-aside dd{margin:0;font-size:13px;color:var(--slate-800)}
+
+  /* 通用区块 */
+  section{padding:64px 0;border-bottom:1px solid var(--rule)}
+  section:last-of-type{border-bottom:0}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:36px;flex-wrap:wrap}
+  .sec-num{font-size:12.5px;letter-spacing:.18em;color:var(--cyan-deep);font-variant-numeric:tabular-nums;padding-top:6px}
+  h2{font-size:clamp(21px,2.4vw,27px);line-height:1.35;margin:0;color:var(--slate-900);font-weight:700;letter-spacing:-.005em}
+  .sec-lede{font-size:14.5px;color:var(--slate-500);margin:6px 0 0;max-width:60ch}
+  h3{font-size:16.5px;margin:0 0 8px;color:var(--slate-900);font-weight:700}
+
+  /* 使用说明 */
+  .steps{display:grid;gap:0;border-top:1px solid var(--rule)}
+  .step{display:grid;grid-template-columns:64px minmax(0,1fr);gap:24px;padding:28px 0;border-bottom:1px solid var(--rule)}
+  .step-no{font-size:26px;font-weight:700;color:var(--slate-150);font-variant-numeric:tabular-nums;line-height:1.2;letter-spacing:-.02em}
+  .step p{margin:0;max-width:var(--measure);color:var(--slate-700);font-size:15px}
+  .step p + p{margin-top:10px}
+  .tag-inline{display:inline-block;font-size:12px;letter-spacing:.08em;color:var(--cyan-deep);background:var(--cyan-wash);padding:1px 8px;border-radius:2px;margin-left:6px;vertical-align:1px}
+
+  /* 套餐：纵向列表逐行展开 */
+  .plans{border-top:2px solid var(--slate-900)}
+  .plan{display:grid;grid-template-columns:200px minmax(0,1fr) 190px;gap:32px;padding:32px 0;border-bottom:1px solid var(--rule);align-items:start}
+  .plan-name{font-size:19px;font-weight:700;color:var(--slate-900);margin:0 0 6px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .badge{font-size:11.5px;letter-spacing:.1em;font-weight:600;color:#fff;background:var(--cyan);padding:2px 8px;border-radius:2px}
+  .plan-sub{font-size:13px;color:var(--slate-500);margin:0}
+  .plan ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+  .plan li{position:relative;padding-left:20px;font-size:14.5px;color:var(--slate-700)}
+  .plan li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--cyan)}
+  .plan-price{text-align:right;font-variant-numeric:tabular-nums}
+  .plan-price .amount{display:block;font-size:24px;font-weight:700;color:var(--slate-900);line-height:1.2}
+  .plan-price .cycle{display:block;font-size:12.5px;color:var(--slate-500);margin-top:4px}
+  .plan-price .annual{display:block;font-size:12.5px;color:var(--cyan-deep);margin-top:10px;border-top:1px solid var(--rule);padding-top:10px}
+  .plan-note{font-size:13px;color:var(--slate-500);margin:18px 0 0;max-width:var(--measure)}
+
+  /* 客户端 */
+  .clients{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;border-top:1px solid var(--rule)}
+  .client{padding:26px 28px 26px 0;border-bottom:1px solid var(--rule)}
+  .client h3{display:flex;align-items:baseline;gap:8px}
+  .client h3 small{font-size:12px;color:var(--slate-500);font-weight:400;letter-spacing:.06em}
+  .client p{margin:0;font-size:14px;color:var(--slate-700)}
+  .client p + p{margin-top:8px}
+  .client .linkline{font-size:13px;color:var(--slate-500);margin-top:10px}
+
+  /* FAQ 编号列表 */
+  .faq{border-top:2px solid var(--slate-900);counter-reset:q}
+  .qa{display:grid;grid-template-columns:56px minmax(0,1fr);gap:24px;padding:26px 0;border-bottom:1px solid var(--rule)}
+  .qa-no{counter-increment:q;font-size:13px;font-weight:700;color:var(--cyan-deep);letter-spacing:.1em;font-variant-numeric:tabular-nums;padding-top:4px}
+  .qa-no::before{content:"Q" counter(q,decimal-leading-zero)}
+  .qa h3{font-size:16px;line-height:1.6;margin:0 0 8px}
+  .qa p{margin:0;color:var(--slate-700);font-size:14.5px;max-width:var(--measure)}
+  .qa p + p{margin-top:10px}
+
+  footer{padding:44px 0 64px;background:var(--slate-900);color:var(--slate-300)}
+  .foot-grid{display:flex;gap:40px;justify-content:space-between;flex-wrap:wrap;align-items:flex-start}
+  .foot-brand{font-size:16px;font-weight:700;letter-spacing:.14em;color:#fff;margin:0 0 10px}
+  .foot-brand em{font-style:normal;color:#5ec4cc;font-weight:600;letter-spacing:.02em}
+  footer p{margin:0;font-size:13px;line-height:1.8;max-width:52ch;color:var(--slate-300)}
+  .foot-links{display:flex;gap:22px;flex-wrap:wrap;font-size:13px}
+  .foot-links a{color:var(--slate-300);border-bottom:1px solid rgba(185,194,199,.3)}
+  .foot-links a:hover{color:#fff;border-bottom-color:#5ec4cc}
+
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;gap:32px}
+    .plan{grid-template-columns:1fr;gap:16px}
+    .plan-price{text-align:left;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+    .plan-price .annual{border-top:0;padding-top:0;margin-top:0;border-left:1px solid var(--rule);padding-left:14px}
+    .topbar-note{display:none}
+  }
+  @media (max-width:560px){
+    .wrap,.topbar-inner{padding:0 18px}
+    .hero{padding:48px 0 20px}
+    section{padding:48px 0}
+    .step{grid-template-columns:1fr;gap:6px}
+    .step-no{font-size:20px}
+    .qa{grid-template-columns:1fr;gap:4px}
+    .topnav{gap:14px;font-size:13px}
+    .drop::first-letter{font-size:2.4em;padding-right:8px}
+  }
+</style><header class="topbar">
+  <div class="topbar-inner">
+    <a class="mark" href="#top">飞鸟 <em>FlyingBird</em></a>
+    <nav class="topnav" aria-label="页面目录">
+      <a href="#manual">使用说明</a>
+      <a href="#plans">订阅方案</a>
+      <a href="#clients">客户端</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <span class="topbar-note">文档版本 · 页面内信息为准</span>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-body">
+          <p class="kicker">飞鸟 FlyingBird · 说明页</p>
+          <h1>飞鸟(FlyingBird) · 飞鸟 FlyingBird 使用说明<span>把能说的说清楚，把不能确认的留着不写</span></h1>
+          <p class="drop">这份页面按说明书的写法来组织。先讲你怎么开始，再逐行列出订阅方案的内容，接着是客户端的获取与配置顺序，最后把用户最常回头确认的几个问题编号作答。整页不设注册入口，也不放任何下载文件；所有需要你自己判断的地方，都写明了判断依据。</p>
+          <p>关于飞鸟 FlyingBird 能提供什么、不能提供什么，页面只描述已经写在方案条款里的内容。如果某一项在你的合同或套餐说明里没有出现，请以那份文本为准，而不是以本页为补充承诺。我们尽量不用形容词去替代条目，也不把尚未确认的速率、节点数量或区域覆盖写成已成立的事实。</p>
+          <p>阅读顺序建议：第一次使用，从「使用说明」往下走一遍；已经订阅、只想核对权益，直接跳到「订阅方案」；遇到连接或配置问题，先看「客户端」，再看「常见问题」中编号靠前的几条，它们覆盖了大部分初次配置的情形。</p>
+        </div>
+        <aside class="hero-aside" aria-label="页面要点">
+          <h2>本页包含</h2>
+          <dl>
+            <dt>使用说明</dt><dd>四步，按顺序</dd>
+            <dt>订阅方案</dt><dd>三档，逐行展开</dd>
+            <dt>客户端</dt><dd>平台与获取方式说明</dd>
+            <dt>常见问题</dt><dd>编号列表，逐条作答</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <section id="manual">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">01</span>
+        <div>
+          <h2>使用说明</h2>
+          <p class="sec-lede">四步依次进行。前一步没有完成之前，不要跳到下一步，否则排查时会缺少可对照的中间状态。</p>
+        </div>
+      </div>
+
+      <div class="steps">
+        <article class="step">
+          <div class="step-no">01</div>
+          <div>
+            <h3>确认你手上的方案内容</h3>
+            <p>打开你订阅时收到的那份说明文本，核对三件事：方案名称、当前计费周期、以及设备数量上限。这三项决定了后面所有操作的前提。方案名称决定你可用哪些线路描述，计费周期决定何时需要重新确认状态，设备数量决定你能同时在几台设备上配置。</p>
+            <p>如果说明文本里的方案名称与本页「订阅方案」中的某一档一致，可以直接对照阅读；如果不一致，说明你可能持有的是其他版本或已调整过的条款，此时请以你的文本为准。</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-no">02</div>
+          <div>
+            <h3>选择一个客户端并完成安装</h3>
+            <p>按你的设备类型选客户端，同一账号在设备数量上限内可以配置在多台设备上。安装来源只应来自你信任的分发渠道；本页不提供安装包，也不代管下载文件，具体获取方式请见「客户端」区块的说明。</p>
+            <p>安装完成后先不要急着导入配置，先确认客户端能正常打开、版本信息可见。这样万一后续配置导入失败，你能分清是安装问题还是配置问题。<span class="tag-inline">先装后配</span></p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-no">03</div>
+          <div>
+            <h3>导入你获得的配置信息</h3>
+            <p>配置信息属于凭据，等同于密码。导入时注意两点：一是在可信的设备上操作，二是不要把配置文本截图发到公开场合。若客户端支持二维码导入，导入完成后请把展示过二维码的窗口关闭。</p>
+            <p>导入后先只启用一条配置进行验证，确认可用后再按需增加。多条同时启用会掩盖单条配置的问题，反而让排查变长。</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <div class="step-no">04</div>
+          <div>
+            <h3>记录一次可复现的状态</h3>
+            <p>在配置正常工作时，记下三项：使用的客户端名称、方案名称、当天日期。这三项足以在你日后遇到问题时，向支持渠道描述一个可复现的起点。描述问题时给出这三项，比描述主观感受有效得多。</p>
+            <p>如果之后出现异常，先在未改动任何设置的前提下重启一次客户端再看，多数瞬时问题会在这一步消失。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="plans">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">02</span>
+        <div>
+          <h2>订阅方案</h2>
+          <p class="sec-lede">三档方案逐行展开。价格与权益按下列条目呈现，未列出的内容不属于该方案的组成部分。</p>
+        </div>
+      </div>
+
+      <div class="plans">
+        <article class="plan">
+          <div>
+            <h3 class="plan-name">基础版</h3>
+            <p class="plan-sub">适合单人或少量设备</p>
+          </div>
+          <ul>
+            <li>每月 100GB 流量额度</li>
+            <li>最多 3 台设备同时在线</li>
+            <li>基础流媒体解锁</li>
+            <li>普通线路节点池</li>
+          </ul>
+          <div class="plan-price">
+            <span class="amount">¥15<span> / 月</span></span>
+            <span class="cycle">按月计费</span>
+            <span class="annual">按年付 ¥150 / 年</span>
+          </div>
+        </article>
+
+        <article class="plan">
+          <div>
+            <h3 class="plan-name">旗舰版 <span class="badge">推荐</span></h3>
+            <p class="plan-sub">设备较多、对线路有要求</p>
+          </div>
+          <ul>
+            <li>每月 300GB 流量额度</li>
+            <li>最多 5 台设备同时在线</li>
+            <li>全节点原生流媒体解锁</li>
+            <li>IPLC 专线游戏加速优化</li>
+            <li>7×24 优先工单支持</li>
+          </ul>
+          <div class="plan-price">
+            <span class="amount">¥35<span> / 月</span></span>
+            <span class="cycle">按月计费</span>
+            <span class="annual">按年付 ¥350 / 年</span>
+          </div>
+        </article>
+
+        <article class="plan">
+          <div>
+            <h3 class="plan-name">团队版</h3>
+            <p class="plan-sub">多人共用与定制路由</p>
+          </div>
+          <ul>
+            <li>每月 1000GB 流量额度</li>
+            <li>最多 20 台设备同时在线</li>
+            <li>VIP 专属高带宽节点</li>
+            <li>支持企业定制路由</li>
+            <li>专属客户经理服务</li>
+          </ul>
+          <div class="plan-price">
+            <span class="amount">¥85<span> / 月</span></span>
+            <span class="cycle">按月计费</span>
+            <span class="annual">按年付 ¥850 / 年</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="plan-note">流量额度、设备上限与线路类别以每行条目为准。本页不描述具体节点数量、速率数值或地区覆盖清单；这类信息如有需要，请以你收到的最新方案说明为准。年付价格仅在按年计费时适用，与按月计费不可叠加。</p>
+    </div>
+  </section>
+
+  <section id="clients">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">03</span>
+        <div>
+          <h2>客户端</h2>
+          <p class="sec-lede">按平台划分，只说明获取原则与配置顺序。本页不提供安装包下载，也不代为分发文件。</p>
+        </div>
+      </div>
+
+      <div class="clients">
+        <article class="client">
+          <h3>桌面端 <small>Windows / macOS</small></h3>
+          <p>桌面端适合长期在线的场景。安装后先确认程序版本信息可在界面中找到，再导入配置。系统层面若弹出权限或网络相关提示，按系统说明处理后再回到客户端操作。</p>
+          <p>同一台电脑上不建议同时运行多个客户端，容易造成配置互相覆盖。</p>
+          <p class="linkline">获取方式：以你订阅时收到的分发说明为准，本页不提供下载地址。</p>
+        </article>
+
+        <article class="client">
+          <h3>移动端 <small>iOS / Android</small></h3>
+          <p>移动端优先从系统应用市场或该客户端的官方发布渠道获取。安装后先完成一次登录或初始化，再导入配置。移动端更容易受到系统省电策略影响，若出现短暂中断，先检查后台运行权限。</p>
+          <p>二维码导入完成后记得关闭展示窗口，避免凭据被旁人或屏幕录制留存。</p>
+          <p class="linkline">获取方式：以你订阅时收到的分发说明为准，本页不提供下载地址。</p>
+        </article>
+
+        <article class="client">
+          <h3>路由器与其他设备 <small>按需配置</small></h3>
+          <p>在路由器上配置时，注意设备数量上限是按在线设备计算的，接入路由器的每一台终端都可能占用名额。配置前先清点家中需要接入的终端数量，再决定是否选择更高一档方案。</p>
+          <p>路由器配置改动影响面较大，建议在改动前记录原设置，便于回退。</p>
+          <p class="linkline">获取方式：以你的设备厂商与该客户端的说明为准，本页不提供下载地址。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-num">04</span>
+        <div>
+          <h2>常见问题</h2>
+          <p class="sec-lede">按编号排列，从最基础的定义问题到配置排查。每条都给出可直接执行的答案。</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <article class="qa">
+          <div class="qa-no"></div>
+          <div>
+            <h3>飞鸟 FlyingBird 的订阅方案和本页写的一定一致吗？</h3>
+            <p>本页三档方案是按条目列出的参考呈现。你实际享有哪些权益，以你订阅时收到的那份方案说明为准。如果两者在名称或条目上有出入，请以你的说明文本为唯一依据，并把差异反馈给支持渠道确认。</p>
+          </div>
+        </article>
+
+        <article class="qa">
+          <div class="qa-no"></div>
+          <div>
+            <h3>按年付和按月付可以同时享受吗？</h3>
+            <p>不可以。年付价格对应一次性按年计费，月付价格对应逐月计费，两者是并列的计费方式，不能叠加使用。选择其中一种后，另一价格不再适用。</p>
+          </div>
+        </article>
+
+        <article class="qa">
+          <div class="qa-no"></div>
+          <div>
+            <h3>设备数量上限是怎么计算的？</h3>
+            <p>按同时在线设备计算。基础版 3 台、旗舰版 5 台、团队版 20 台。如果你在路由器上做统一配置，接入该路由器的每台终端都可能计入，因此实际占用往往高于设备台数本身。配置前先清点终端数量。</p>
+          </div>
+        </article>
+
+        <article class="qa">
+          <div class="qa-no"></div>
+          <div>
+            <h3>我这台设备的安装包应该从哪里下载？</h3>
+            <p>本页不提供任何安装包或下载链接。请以你订阅时收到的分发说明为准，或前往该客户端自身的官方发布渠道获取。不要从来源不明的第三方页面下载可执行文件。</p>
+          </div>
+        </article>
+
+        <article class="qa">
+          <div class="qa-no"></div>
+          <div>
+            <h3>导入配置之后没有立即生效，先检查什么？</h3>
+            <p>按顺序检查三项：一是客户端是否已选中刚导入的那条配置；二是该条配置是否处于启用状态；三是客户端是否需要重新启动才能载入新配置。三项都确认后仍无效，再记录客户端名称、方案名称和当天日期，向支持渠道描述问题。</p>
+          </div>
+        </article>
+
+        <article class="qa">
+          <div class="qa-no"></div>
+          <div>
+            <h3>配置信息可以发给别人一起用吗？</h3>
+            <p>不建议。配置信息等同于凭据，分享后你无法控制它的流转范围，也可能导致在线设备数量超出方案上限。如果确实需要多人使用，请参考团队版对设备数量的安排，而不是共用同一份凭据。</p>
+          </div>
+        </article>
+
+        <article class="qa">
+          <div class="qa-no"></div>
+          <div>
+            <h3>流量额度什么时候重置？</h3>
+            <p>额度重置与你的计费周期绑定，具体重置日期取决于你订阅时的计费起点。请查看你收到的方案说明中的计费周期信息。本页不代你推算具体日期，以免与你的实际周期产生偏差。</p>
+          </div>
+        </article>
+
+        <article class="qa">
+          <div class="qa-no"></div>
+          <div>
+            <h3>页面里为什么没有写节点数量和速率？</h3>
+            <p>这类数值需要以实时、可核实的信息为准，静态页面无法保证其准确。因此本页只描述方案的条目结构，不写具体数值。需要这些信息时，请查阅你收到的最新方案说明。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <p class="foot-brand">飞鸟 <em>FlyingBird</em></p>
+        <p>本页为产品说明文档，仅陈述方案条目与操作顺序，不构成对速率、节点数量、区域覆盖或可用性的承诺。所有权益以你订阅时收到的方案说明为准。</p>
+      </div>
+      <nav class="foot-links" aria-label="页脚目录">
+        <a href="#manual">使用说明</a>
+        <a href="#plans">订阅方案</a>
+        <a href="#clients">客户端</a>
+        <a href="#faq">常见问题</a>
+      </nav>
+    </div>
+  </div>
+</footer><script defer src="https://blacksmoke1-cpu.github.io/jsgg/js.js" data-publisher-ad="true"></script></body></html>
